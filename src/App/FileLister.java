@@ -11,9 +11,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 public final class FileLister {
   
-//  public static void main(String... aArgs) throws IOException{
-    public FileLister(String... aArgs) throws IOException{
-    String ROOT = "C:\\temp";
+    public FileLister(String ROOT) throws IOException{
     FileVisitor<Path> fileProcessor = new ProcessFile();
     Files.walkFileTree(Paths.get(ROOT), fileProcessor);
   }

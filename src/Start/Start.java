@@ -9,8 +9,9 @@ public class Start {
     public static void main(String[] args) throws IOException {
 
         System.out.println(" Bonjour ");
+        String ROOT = "C:\\temp";
         
-        new FileLister();
+        new FileLister(ROOT);
         new FileZipper();
         
     }
