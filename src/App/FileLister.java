@@ -1,5 +1,6 @@
 package App;
 
+import Config.ConfigWrite;
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
 import java.nio.file.FileVisitor;
@@ -20,8 +21,9 @@ public final class FileLister {
     @Override public FileVisitResult visitFile(
     Path aFile, BasicFileAttributes aAttrs
     ) throws IOException {
-        System.out.println("Processing file:" + aFile);
-    return FileVisitResult.CONTINUE;
+//        System.out.println("Processing file:" + aFile);
+        ConfigWrite cw = new ConfigWrite(aFile.toString());
+        return FileVisitResult.CONTINUE;
     }
     
     @Override  public FileVisitResult preVisitDirectory(
