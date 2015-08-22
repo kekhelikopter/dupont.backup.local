@@ -2,6 +2,7 @@ package Start;
 
 import App.FileLister;
 import App.FileZipper;
+import Config.ConfigRead;
 import java.io.IOException;
 
 public class Start {
@@ -13,7 +14,7 @@ public class Start {
         
         new FileLister(ROOT);
         new FileZipper();
-        
+        new ConfigRead("config.cfg");
         
     }
     
