@@ -3,6 +3,7 @@ package Start;
 import App.FileLister;
 import App.FileZipper;
 import Config.ConfigRead;
+import Data.FileList;
 import java.io.IOException;
 
 public class Start {
@@ -13,8 +14,10 @@ public class Start {
         String ROOT = "C:\\temp";
         
         new FileLister(ROOT);
-        new FileZipper();
+//        new FileZipper();
         new ConfigRead("config.cfg");
+  
+        System.out.println(" pathData ");
         
     }
     
