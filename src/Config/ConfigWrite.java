@@ -7,6 +7,8 @@ public class ConfigWrite {
 
     public ConfigWrite(String msg) throws IOException{
         
+        System.out.println(" ConfigWrite ");
+        
         FileWriter fw = new FileWriter("config.cfg", true);
         fw.write(msg + System.lineSeparator());
         fw.close();

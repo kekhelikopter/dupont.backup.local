@@ -1,9 +1,8 @@
 package Start;
 
 import App.FileLister;
-import App.FileZipper;
-import Config.ConfigRead;
-import Data.FileList;
+import static App.FileLister.FileList;
+import static App.FileLister.FolderList;
 import java.io.IOException;
 
 public class Start {
@@ -15,9 +14,13 @@ public class Start {
         
         new FileLister(ROOT);
 //        new FileZipper();
-        new ConfigRead("config.cfg");
-  
-        System.out.println(" pathData ");
+
+        System.out.println(" Array ");
+        
+        int length = FileList.size();
+        System.out.println(length);
+        System.out.println(FileList.get(5));
+        System.out.println(FolderList.get(1));
         
     }
     
